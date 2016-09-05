@@ -1,0 +1,73 @@
+{
+  "name": "bluetooth-hci-socket",
+  "version": "0.5.0",
+  "description": "Bluetooth HCI socket binding for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint lib/*.js",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeepmistry/node-bluetooth-hci-socket.git"
+  },
+  "keywords": [
+    "HCI",
+    "Bluetooth",
+    "Linux",
+    "Windows"
+  ],
+  "author": {
+    "name": "Sandeep Mistry",
+    "email": "sandeep.mistry@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandeepmistry/node-bluetooth-hci-socket/issues"
+  },
+  "homepage": "https://github.com/sandeepmistry/node-bluetooth-hci-socket",
+  "os": [
+    "linux",
+    "android",
+    "win32"
+  ],
+  "dependencies": {
+    "debug": "^2.2.0",
+    "nan": "^2.0.5",
+    "usb": "^1.1.0"
+  },
+  "optionalDependencies": {
+    "usb": "^1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  },
+  "gypfile": true,
+  "gitHead": "f087c3f60d629dc875d35ae42dfc41ff1819a946",
+  "_id": "bluetooth-hci-socket@0.5.0",
+  "_shasum": "956a73c998fa171e4d99c7ce4799090a685e2815",
+  "_from": "bluetooth-hci-socket@latest",
+  "_npmVersion": "2.15.5",
+  "_nodeVersion": "4.4.6",
+  "_npmUser": {
+    "name": "sandeepmistry",
+    "email": "sandeep.mistry@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "sandeepmistry",
+      "email": "sandeep.mistry@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "956a73c998fa171e4d99c7ce4799090a685e2815",
+    "tarball": "https://registry.npmjs.org/bluetooth-hci-socket/-/bluetooth-hci-socket-0.5.0.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/bluetooth-hci-socket-0.5.0.tgz_1467552553796_0.02664171066135168"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/bluetooth-hci-socket/-/bluetooth-hci-socket-0.5.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

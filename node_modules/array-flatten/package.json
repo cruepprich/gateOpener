@@ -1,0 +1,73 @@
+{
+  "name": "array-flatten",
+  "version": "2.1.0",
+  "description": "Flatten nested arrays",
+  "main": "array-flatten.js",
+  "typings": "array-flatten.d.ts",
+  "files": [
+    "array-flatten.js",
+    "array-flatten.d.ts",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "test-spec": "mocha -R spec --bail",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
+    "test": "npm run lint && npm run test-cov",
+    "benchmark": "node benchmark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/array-flatten.git"
+  },
+  "keywords": [
+    "array",
+    "flatten",
+    "arguments",
+    "depth",
+    "fast",
+    "for"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/array-flatten/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/array-flatten",
+  "devDependencies": {
+    "benchmarked": "^0.1.4",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.2.4",
+    "standard": "^5.3.1"
+  },
+  "gitHead": "d5446b9a5e373c3dfa73b9275c53fc9c32ef0979",
+  "_id": "array-flatten@2.1.0",
+  "_shasum": "26a692c83881fc68dac3ec5d1f0c1b49bf2304d9",
+  "_from": "array-flatten@2.1.0",
+  "_npmVersion": "3.8.3",
+  "_nodeVersion": "5.10.1",
+  "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+  },
+  "dist": {
+    "shasum": "26a692c83881fc68dac3ec5d1f0c1b49bf2304d9",
+    "tarball": "https://registry.npmjs.org/array-flatten/-/array-flatten-2.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "blakeembrey",
+      "email": "hello@blakeembrey.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/array-flatten-2.1.0.tgz_1461890592426_0.306347094476223"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/array-flatten/-/array-flatten-2.1.0.tgz"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "xmlhttprequest-ssl",
+  "description": "XMLHttpRequest for Node",
+  "version": "1.5.2",
+  "author": {
+    "name": "Michael de Wit"
+  },
+  "keywords": [
+    "xhr",
+    "ajax"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://creativecommons.org/licenses/MIT/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mjwwit/node-XMLHttpRequest.git"
+  },
+  "bugs": {
+    "url": "http://github.com/mjwwit/node-XMLHttpRequest/issues"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "scripts": {
+    "test": "cd ./tests && node test-constants.js && node test-events.js && node test-exceptions.js && node test-headers.js && node test-redirect-302.js && node test-redirect-303.js && node test-redirect-307.js && node test-request-methods.js && node test-request-protocols.js"
+  },
+  "directories": {
+    "lib": "./lib",
+    "example": "./example"
+  },
+  "main": "./lib/XMLHttpRequest.js",
+  "dependencies": {},
+  "gitHead": "9eb7a1b04a356beb3dd47b2a9f10d92ee65ca8dd",
+  "homepage": "https://github.com/mjwwit/node-XMLHttpRequest#readme",
+  "_id": "xmlhttprequest-ssl@1.5.2",
+  "_shasum": "0a9ab125d0bd41cc7016f3543c5d21e1f05c4eba",
+  "_from": "xmlhttprequest-ssl@1.5.2",
+  "_npmVersion": "2.14.15",
+  "_nodeVersion": "4.2.3",
+  "_npmUser": {
+    "name": "mjwwit",
+    "email": "mjwwit@gmail.com"
+  },
+  "dist": {
+    "shasum": "0a9ab125d0bd41cc7016f3543c5d21e1f05c4eba",
+    "tarball": "https://registry.npmjs.org/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "mjwwit",
+      "email": "mjwwit@gmail.com"
+    }
+  ],
+  "_resolved": "https://registry.npmjs.org/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.2.tgz"
+}
