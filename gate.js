@@ -6,9 +6,10 @@
  *  - http://opensource.org/licenses/gpl-3.0.html
  * @author Christoph Ruepprich https://ruepprich.wordpress.com
  * 
- * Used to read a bluetooth low energy emitter (BLE) beacon and trigger a garage door
+ * Used to read a bluetooth low energy emitter (BLE) beacon and trigger a swing gate
  * opener when the beacon comes into range.
- * Requires a Raspberry Pi 2 with a bluetooth USB adapter (https://amzn.com/B009ZIILLI)
+ * Requires a Raspberry Pi 2 with a bluetooth USB adapter:
+ * (https://amzn.com/B009ZIILLI)
  * 
  * The noble library is used to read bluetooth signals.
  * (https://github.com/sandeepmistry/noble)
@@ -49,6 +50,12 @@ function pressButton() {
 
 }
 
+
+//Set the gateState to MOVING. This prevents the gate
+//being acivated when already moving.
+//The gate moves about 7 seconds. After that time the
+//state is set back to STOPPED so that the gate can be
+//activated again.
 function activateGate() {
   gateState = 'MOVING';
   pressButton();
@@ -56,9 +63,14 @@ function activateGate() {
   //wait until gate is open
   setTimeout(function() {
     gateState = 'STOPPED';
-  }, 3000);
+  }, 7000);
 }
 
+
+//Main noble listener. When a BLE is detected we check if it is 
+//within an acceptable range. The we check whether we have detected
+//it previously. If not, we check if it is our beacon (TurnoutNow)
+//and activate the gate.
 noble.on('discover', function(peripheral) {
   if (peripheral.rssi < RSSI_THRESHOLD) {
     // ignore
