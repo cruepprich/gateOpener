@@ -1,10 +1,3 @@
-/*
-  Continously scans for peripherals and prints out message when they enter/exit
-    In range criteria:      RSSI < threshold
-    Out of range criteria:  lastSeen > grace period
-  based on code provided by: Mattias Ask (http://www.dittlof.com)
-*/
-
 /** 
  * Node.js BLE enabled relay switch
  * Created for ODTUG Geekathon 2016
@@ -24,7 +17,6 @@
  * (https://github.com/fivdi/onoff)
  **/
 
-var noble = require('noble');
 
 var RSSI_THRESHOLD    = -100;
 var EXIT_GRACE_PERIOD = 2000; // milliseconds
@@ -32,30 +24,22 @@ var EXIT_GRACE_PERIOD = 2000; // milliseconds
 var inRange = [];
 
 var gpio = require('onoff').Gpio
+  , noble = require('noble')
   , led = new gpio(4, 'out')
   , remote = new gpio(17,'out')
   , iv
   , t1 = new Date().getTime()
   , t2
   , diff
-  , ledBlinks = false
   , scanInterval = 1
   , beaconConnected = false
   , gateState = 'STOPPED' //MOVING,STOPPED
   , ledState;
 
-// make LED blink
-function blinkLED(freq) {
-   if (!ledBlinks) {
-	ledBlinks = true
-	   freq = (freq == undefined ? 200 : freq);
-		iv = setInterval(function() {
-			onoff = led.readSync() ^ 1;
-			led.writeSync( onoff );
-		 }, freq);
-  }
-}
 
+//Sends signal to switch the relay on for one second.
+//This in effect simulates pressing the button on the
+//garage door opener remote.
 function pressButton() {
   //press button for n seconds
   remote.writeSync(1);
